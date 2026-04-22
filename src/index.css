@@ -1,0 +1,128 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "IBM Plex Sans", "Segoe UI", Tahoma, sans-serif;
+
+  --color-primary-100: #8b5cf6;
+  --color-primary-200: #c084fc;
+  --color-primary-300: #f3e8ff;
+
+  --color-accent-100: #f472b6;
+  --color-accent-200: #4a234b;
+
+  --color-text-100: #fdf7ff;
+  --color-text-200: #dbc7ea;
+
+  --color-bg-100: #170f24;
+  --color-bg-200: #241537;
+  --color-bg-300: #39204f;
+
+  --radius-panel: 1rem;
+  --shadow-soft-glow: 0 16px 42px -22px rgba(192, 132, 252, 0.55);
+}
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background:
+    radial-gradient(circle at 88% -18%, rgba(244, 114, 182, 0.22) 0%, transparent 45%),
+    radial-gradient(circle at -8% 108%, rgba(139, 92, 246, 0.28) 0%, transparent 49%),
+    radial-gradient(circle at 52% 54%, rgba(243, 232, 255, 0.1) 0%, transparent 72%),
+    var(--color-bg-100);
+  color: var(--color-text-100);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@keyframes toast-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.toast-enter {
+  animation: toast-in 200ms ease forwards;
+}
+
+@keyframes history-icon-dip {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  28% {
+    opacity: 0;
+    transform: scale(0.72);
+  }
+  72% {
+    opacity: 0;
+    transform: scale(0.72);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes history-check-flash {
+  0% {
+    opacity: 0;
+    transform: scale(0.72);
+  }
+  28% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  72% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.78);
+  }
+}
+
+.history-icon-pulse {
+  animation: history-icon-dip 900ms ease;
+}
+
+.history-check-pulse {
+  animation: history-check-flash 900ms ease;
+}
+
+@keyframes history-button-flash {
+  0% {
+    border-color: var(--color-bg-300);
+    background-color: var(--color-bg-200);
+    color: var(--color-text-200);
+  }
+  28% {
+    border-color: var(--color-primary-200);
+    background-color: rgba(192, 132, 252, 0.22);
+    color: var(--color-primary-300);
+  }
+  72% {
+    border-color: var(--color-primary-200);
+    background-color: rgba(192, 132, 252, 0.22);
+    color: var(--color-primary-300);
+  }
+  100% {
+    border-color: var(--color-bg-300);
+    background-color: var(--color-bg-200);
+    color: var(--color-text-200);
+  }
+}
+
+.history-button-pulse {
+  animation: history-button-flash 900ms ease;
+}
