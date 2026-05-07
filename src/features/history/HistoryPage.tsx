@@ -1,4 +1,4 @@
-﻿import { QRCodeCanvas } from "qrcode.react";
+import { QRCodeCanvas } from "qrcode.react";
 import { useEffect, useMemo, useState } from "react";
 import { useNavigate } from "react-router";
 
@@ -11,7 +11,7 @@ import {
   TrashIcon,
   ZoomIcon,
 } from "../../components";
-import { useQrStore } from "../../state/useQrStore";
+import { useQrStore } from "../../store/useQrStore";
 
 const PREVIEW_SIZE = 72;
 const DETAIL_SIZE = 300;

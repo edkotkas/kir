@@ -1,5 +1,5 @@
 import type { ComponentPropsWithoutRef, ElementType } from "react";
-import { cn } from "../helpers/class-name";
+import { cn } from "../utils/class-name";
 
 type SurfaceProps<T extends ElementType> = {
   as?: T;
