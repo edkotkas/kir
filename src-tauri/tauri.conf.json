@@ -49,10 +49,7 @@
       "windows": {
         "installMode": "passive"
       },
-      "endpoints": [
-        "https://cdn.crabnebula.app/update/frosty-fox/kir/{{target}}-{{arch}}/{{current_version}}"
-      ],
-      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDU5RTBDMTg1Q0U3MjZFQjAKUldTd2JuTE9oY0hnV1pmK1B3aFEwOGF0Wjc4akc4cDBIZUgvS0ZIcVdCaXc5M09Zd0M2bmRLOEMK"
+      "releaseDownloadUrl": "https://github.com/{owner}/{repo}/releases/download/{tag}/{filename}"
     }
   }
 }
