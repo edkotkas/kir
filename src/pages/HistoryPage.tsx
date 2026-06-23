@@ -1,1 +1,1 @@
-export { HistoryPage } from "../features/history/HistoryPage";
+export { HistoryPage } from "../features/history";

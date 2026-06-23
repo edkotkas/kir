@@ -1,8 +1,8 @@
 [package]
-name = "app"
+name = "kir"
 version = "0.1.0"
-description = "A Tauri App"
-authors = ["you"]
+description = "A Simple QR code app."
+authors = ["Eduard Kotkas"]
 license = ""
 repository = ""
 edition = "2021"
@@ -24,3 +24,6 @@ log = "0.4"
 tauri = { version = "2.10.3", features = ["tray-icon", "image-png"] }
 tauri-plugin-autostart = "2"
 tauri-plugin-log = "2"
+
+[target.'cfg(not(any(target_os = "android", target_os = "ios")))'.dependencies]
+tauri-plugin-updater = "2"

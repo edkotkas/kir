@@ -1,1 +1,1 @@
-export { GeneratePage } from "../features/generate/GeneratePage";
+export { GeneratePage } from "../features/generate";

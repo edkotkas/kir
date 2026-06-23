@@ -19,6 +19,7 @@ use window::{emit_navigation, position_window_on_startup, save_window_state, Sav
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 pub fn run() {
     tauri::Builder::default()
+        .plugin(tauri_plugin_updater::Builder::new().build())
         .manage(AppSettings::new())
         .invoke_handler(tauri::generate_handler![
             set_close_to_tray_on_close,

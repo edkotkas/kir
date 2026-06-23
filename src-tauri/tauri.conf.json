@@ -27,6 +27,8 @@
     }
   },
   "bundle": {
+    "publisher": "Eduard Kotkas",
+    "createUpdaterArtifacts": true,
     "active": true,
     "targets": "all",
     "icon": [
@@ -35,6 +37,22 @@
       "icons/128x128@2x.png",
       "icons/icon.icns",
       "icons/icon.ico"
-    ]
+    ],
+    "windows": {
+      "webviewInstallMode": {
+        "type": "offlineInstaller"
+      }
+    }
+  },
+  "plugins": {
+    "updater": {
+      "windows": {
+        "installMode": "passive"
+      },
+      "endpoints": [
+        "https://cdn.crabnebula.app/update/frosty-fox/kir/{{target}}-{{arch}}/{{current_version}}"
+      ],
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDU5RTBDMTg1Q0U3MjZFQjAKUldTd2JuTE9oY0hnV1pmK1B3aFEwOGF0Wjc4akc4cDBIZUgvS0ZIcVdCaXc5M09Zd0M2bmRLOEMK"
+    }
   }
 }
