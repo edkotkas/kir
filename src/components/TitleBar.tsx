@@ -1,5 +1,4 @@
 import { getCurrentWindow } from "@tauri-apps/api/window";
-import { useRef } from "react";
 import { useLocation, useNavigate } from "react-router";
 import { useQrStore } from "../store/useQrStore";
 import { cn } from "../utils/class-name";
@@ -20,11 +19,9 @@ export function TitleBar() {
   const {
     state: { lastSavedAt }
   } = useQrStore();
-  const winRef = useRef(isTauri ? getCurrentWindow() : null);
-
   if (!isTauri) return null;
 
-  const win = winRef.current!;
+  const win = getCurrentWindow();
 
   return (
     <div

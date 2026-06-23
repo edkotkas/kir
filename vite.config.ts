@@ -1,14 +1,13 @@
 /// <reference types="vitest/config" />
 
-import tailwindcss from "@tailwindcss/vite";
-import react from "@vitejs/plugin-react";
-import { defineConfig } from "vite";
-import { VitePWA } from "vite-plugin-pwa";
+import tailwindcss from "@tailwindcss/vite"
+import react from "@vitejs/plugin-react"
+import { defineConfig } from "vite"
 
-const tauriHost = process.env.TAURI_DEV_HOST;
+const tauriHost = process.env.TAURI_DEV_HOST
 
 // https://vite.dev/config/
-export default defineConfig(({ command }) => ({
+export default defineConfig(() => ({
   clearScreen: false,
   server: {
     host: tauriHost || false,
@@ -54,27 +53,6 @@ export default defineConfig(({ command }) => ({
         minify: true
       }
     }),
-    react(),
-    VitePWA({
-      disable: command === "serve",
-      registerType: "autoUpdate",
-      manifest: {
-        name: "kir",
-        short_name: "kir",
-        description: "Offline QR generator and scanner",
-        theme_color: "#020617",
-        background_color: "#020617",
-        display: "standalone",
-        start_url: "/",
-        icons: [
-          {
-            src: "/favicon.svg",
-            sizes: "any",
-            type: "image/svg+xml",
-            purpose: "any"
-          }
-        ]
-      }
-    })
+    react()
   ]
-}));
+}))

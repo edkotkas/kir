@@ -12,7 +12,8 @@ export default defineConfig(
     "coverage",
     "reports",
     ".stryker-tmp",
-    "node_modules"
+    "node_modules",
+    ".remember/tmp"
   ]),
   {
     files: ["**/*.{ts,tsx}"],
@@ -34,7 +35,7 @@ export default defineConfig(
   },
   {
     rules: {
-      "no-unused-vars": [
+      "@typescript-eslint/no-unused-vars": [
         "error",
         {
           ignoreRestSiblings: true,
