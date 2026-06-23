@@ -1,5 +1,5 @@
 import type { ButtonHTMLAttributes } from "react";
-import { cn } from "../helpers/class-name";
+import { cn } from "../../utils/class-name";
 
 type IconButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   label: string;

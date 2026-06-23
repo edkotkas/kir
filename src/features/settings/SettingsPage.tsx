@@ -8,8 +8,8 @@ import {
   CloseIcon,
   Surface,
 } from "../../components";
-import { cn } from "../../helpers/class-name";
-import { useQrStore } from "../../state/useQrStore";
+import { useQrStore } from "../../store/useQrStore";
+import { cn } from "../../utils/class-name";
 
 const DEFAULT_SETTINGS = {
   maxHistory: 50,

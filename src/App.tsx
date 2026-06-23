@@ -1,8 +1,8 @@
 import { Navigate, Route, Routes } from "react-router";
 import { Layout } from "./components/Layout";
-import { GeneratePage } from "./pages/generate/GeneratePage";
-import { HistoryPage } from "./pages/history/HistoryPage";
-import { SettingsPage } from "./pages/settings/SettingsPage";
+import { GeneratePage } from "./pages/GeneratePage";
+import { HistoryPage } from "./pages/HistoryPage";
+import { SettingsPage } from "./pages/SettingsPage";
 
 export default function App() {
   return (

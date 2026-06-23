@@ -1,15 +1,15 @@
 import { getCurrentWindow } from "@tauri-apps/api/window";
 import { useRef } from "react";
 import { useLocation, useNavigate } from "react-router";
-import { cn } from "../helpers/class-name";
-import { useQrStore } from "../state/useQrStore";
+import { useQrStore } from "../store/useQrStore";
+import { cn } from "../utils/class-name";
 import {
   CheckIcon,
   CloseIcon,
   HistoryIcon,
   MinimizeIcon,
   SettingsIcon,
-} from "./index";
+} from "./icons";
 
 const isTauri =
   typeof window !== "undefined" && "__TAURI_INTERNALS__" in window;

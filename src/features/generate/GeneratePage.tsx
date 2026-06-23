@@ -9,9 +9,9 @@ import {
   SaveIcon,
   Surface,
 } from "../../components";
-import { AppTextarea } from "../../components/AppTextarea";
-import { cn } from "../../helpers/class-name";
-import { useQrStore } from "../../state/useQrStore";
+import { AppTextarea } from "../../components/ui";
+import { useQrStore } from "../../store/useQrStore";
+import { cn } from "../../utils/class-name";
 import "./GeneratePage.css";
 
 const MAX_INPUT_LENGTH = 1200;
@@ -98,7 +98,6 @@ export function GeneratePage() {
   const [fgColor, setFgColor] = useState("#111827");
   const [bgColor, setBgColor] = useState("#ffffff");
   const [size, setSize] = useState(240);
-  const level: "L" | "M" | "Q" | "H" = "M";
   const [uploadedImage, setUploadedImage] = useState<string | null>(null);
   const moduleImage: string | null = null;
   const useModuleImage = false;
@@ -133,7 +132,7 @@ export function GeneratePage() {
   const hasUploadedCutout = Boolean(uploadedImage);
   const hasMissingModuleImage = useModuleImage && !moduleImage;
   const hasCutout = hasUploadedCutout;
-  const effectiveLevel: "L" | "M" | "Q" | "H" = hasCutout ? "H" : level;
+  const effectiveLevel: "L" | "M" | "Q" | "H" = hasCutout ? "H" : "M";
   const canGenerate =
     hasContent &&
     !isContentTooLong &&
