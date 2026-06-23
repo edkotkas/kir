@@ -8,7 +8,7 @@ import {
   CloseIcon,
   HistoryIcon,
   MinimizeIcon,
-  SettingsIcon,
+  SettingsIcon
 } from "./icons";
 
 const isTauri =
@@ -18,7 +18,7 @@ export function TitleBar() {
   const navigate = useNavigate();
   const { pathname } = useLocation();
   const {
-    state: { lastSavedAt },
+    state: { lastSavedAt }
   } = useQrStore();
   const winRef = useRef(isTauri ? getCurrentWindow() : null);
 
@@ -51,13 +51,13 @@ export function TitleBar() {
             <HistoryIcon
               className={cn(
                 "h-5 w-5",
-                Boolean(lastSavedAt) && "history-icon-pulse",
+                Boolean(lastSavedAt) && "history-icon-pulse"
               )}
             />
             <CheckIcon
               className={cn(
                 "pointer-events-none absolute h-5 w-5 opacity-0 text-emerald-300",
-                Boolean(lastSavedAt) && "history-check-pulse",
+                Boolean(lastSavedAt) && "history-check-pulse"
               )}
             />
           </span>
@@ -104,7 +104,7 @@ function NavButton({
   label,
   active,
   onClick,
-  children,
+  children
 }: {
   label: string;
   active: boolean;
@@ -120,7 +120,7 @@ function NavButton({
         "inline-flex h-8 w-8 items-center justify-center rounded-lg border transition",
         active
           ? "border-primary-100/50 bg-primary-100/15 text-primary-200"
-          : "border-transparent text-text-200 hover:border-bg-300 hover:bg-bg-200/70 hover:text-text-100",
+          : "border-transparent text-text-200 hover:border-bg-300 hover:bg-bg-200/70 hover:text-text-100"
       )}
     >
       {children}
@@ -132,7 +132,7 @@ function TitleBarButton({
   label,
   onClick,
   className,
-  children,
+  children
 }: {
   label: string;
   onClick: () => void;
@@ -146,7 +146,7 @@ function TitleBarButton({
       onClick={onClick}
       className={cn(
         "inline-flex h-8 w-8 items-center justify-center rounded-lg border border-transparent text-text-200 transition hover:border-bg-300 hover:bg-bg-200/70 hover:text-text-100",
-        className,
+        className
       )}
     >
       {children}

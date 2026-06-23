@@ -20,7 +20,7 @@ export function useGenerateAutoSave({
   canGenerate,
   hasUserEditedInput,
   autoSaveDelayMs,
-  setSaved,
+  setSaved
 }: UseGenerateAutoSaveInput) {
   const saveTimeoutRef = useRef<number | null>(null);
 
@@ -54,6 +54,6 @@ export function useGenerateAutoSave({
     canGenerate,
     hasUserEditedInput,
     setSaved,
-    trimmed,
+    trimmed
   ]);
 }

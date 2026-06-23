@@ -22,8 +22,8 @@ export function ShellGuards() {
           "textarea",
           "canvas.qr-code-media",
           "svg.qr-code-media",
-          "[data-allow-context-menu='true']",
-        ].join(","),
+          "[data-allow-context-menu='true']"
+        ].join(",")
       );
 
       if (!allow) {

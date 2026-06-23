@@ -25,7 +25,7 @@ export function GeneratePreviewPanel({
   useModuleImage,
   imageSettings,
   rails,
-  qrCanvasRef,
+  qrCanvasRef
 }: GeneratePreviewPanelProps) {
   return (
     <Surface className="relative flex min-h-0 flex-1 flex-col items-center justify-center rounded-2xl p-5">

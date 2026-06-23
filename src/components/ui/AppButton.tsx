@@ -17,7 +17,7 @@ export function AppButton({
         variant === "primary"
           ? "border-primary-100 bg-linear-to-r from-primary-100 to-accent-100 text-text-100 hover:from-primary-200 hover:to-primary-100"
           : "border-bg-300 bg-linear-to-br from-bg-200 to-bg-300 text-text-100 hover:brightness-110",
-        className,
+        className
       )}
       {...props}
     />

@@ -34,5 +34,5 @@ export interface QrStoreValue {
 }
 
 export const QrStoreContext = createContext<QrStoreValue | undefined>(
-  undefined,
+  undefined
 );

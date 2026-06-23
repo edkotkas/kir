@@ -6,7 +6,7 @@ export function useHistoryPreview(entries: QrEntry[]) {
 
   const activeEntry = useMemo(
     () => entries.find((entry) => entry.id === activeEntryId) ?? null,
-    [activeEntryId, entries],
+    [activeEntryId, entries]
   );
 
   useEffect(() => {

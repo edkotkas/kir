@@ -5,7 +5,7 @@ import {
   SettingsRestoreDefaultsSection,
   SettingsStatusToast,
   StartupSettingsSection,
-  WindowBehaviorSettingsSection,
+  WindowBehaviorSettingsSection
 } from "./components";
 import { DEFAULT_SETTINGS } from "./constants";
 import { useSettingsStatus } from "./hooks";

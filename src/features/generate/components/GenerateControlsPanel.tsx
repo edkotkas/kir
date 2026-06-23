@@ -24,7 +24,7 @@ export function GenerateControlsPanel({
   onBgColorChange,
   onSizeChange,
   onUploadImage,
-  onClearUpload,
+  onClearUpload
 }: GenerateControlsPanelProps) {
   return (
     <Surface className="relative shrink-0 rounded-xl p-2">

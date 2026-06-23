@@ -3,7 +3,7 @@ import {
   HistoryEmptyState,
   HistoryEntriesGrid,
   HistoryHeader,
-  HistoryPreviewModal,
+  HistoryPreviewModal
 } from "./components";
 import { useHistoryPreview } from "./hooks";
 

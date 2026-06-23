@@ -20,7 +20,7 @@ export function GenerateInputPanel({
   canGenerate,
   onInputChange,
   onPaste,
-  onSaveManually,
+  onSaveManually
 }: GenerateInputPanelProps) {
   return (
     <Surface as="label" className="grid shrink-0 gap-2 rounded-2xl p-3">

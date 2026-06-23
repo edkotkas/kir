@@ -2,7 +2,7 @@ import type { QrImageSettings } from "./types";
 
 export function getImageSettings(
   uploadedImage: string | null,
-  size: number,
+  size: number
 ): QrImageSettings | undefined {
   if (!uploadedImage) {
     return undefined;
@@ -13,6 +13,6 @@ export function getImageSettings(
     src: uploadedImage,
     width: logoSize,
     height: logoSize,
-    excavate: true,
+    excavate: true
   };
 }

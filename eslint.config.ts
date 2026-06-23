@@ -43,7 +43,6 @@ export default defineConfig(
           destructuredArrayIgnorePattern: "^_"
         }
       ],
-      "prettier/prettier": ["error", { endOfLine: "auto" }],
       "comma-dangle": ["error", { functions: "never" }]
     }
   }

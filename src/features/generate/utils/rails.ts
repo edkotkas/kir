@@ -8,7 +8,7 @@ export function getGenerateRails({
   ratio,
   hasCutout,
   size,
-  hasMissingModuleImage,
+  hasMissingModuleImage
 }: GenerateRailInput) {
   const rails: string[] = [];
 
@@ -20,7 +20,7 @@ export function getGenerateRails({
 
   if (hasUnsafeContrast) {
     rails.push(
-      `Foreground/background contrast is low (${ratio.toFixed(2)}:1). Keep it at least ${MIN_CONTRAST.toFixed(1)}:1.`,
+      `Foreground/background contrast is low (${ratio.toFixed(2)}:1). Keep it at least ${MIN_CONTRAST.toFixed(1)}:1.`
     );
   }
 

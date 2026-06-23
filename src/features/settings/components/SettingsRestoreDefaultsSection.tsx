@@ -5,7 +5,7 @@ type SettingsRestoreDefaultsSectionProps = {
 };
 
 export function SettingsRestoreDefaultsSection({
-  onRestoreDefaults,
+  onRestoreDefaults
 }: SettingsRestoreDefaultsSectionProps) {
   return (
     <Surface className="flex justify-start rounded-2xl p-2">

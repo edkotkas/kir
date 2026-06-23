@@ -20,7 +20,7 @@ function hexToRgb(value: string) {
   return {
     r: (rgb >> 16) & 255,
     g: (rgb >> 8) & 255,
-    b: rgb & 255,
+    b: rgb & 255
   };
 }
 

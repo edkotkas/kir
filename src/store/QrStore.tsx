@@ -6,7 +6,7 @@ import {
   type QrEntry,
   type QrState,
   type QrStoreValue,
-  type Settings,
+  type Settings
 } from "../types/qr";
 
 const STORAGE_KEY = "offline-qr-reader-state";
@@ -18,7 +18,7 @@ const defaultSettings: Settings = {
   closeToTrayOnClose: true,
   trayRestoreLastRoute: true,
   autoStartOnBoot: false,
-  autoStartShowWindow: false,
+  autoStartShowWindow: false
 };
 
 const isTauri =
@@ -27,7 +27,7 @@ const isTauri =
 const initialState: QrState = {
   entries: [],
   settings: defaultSettings,
-  lastSavedAt: null,
+  lastSavedAt: null
 };
 
 type Action =
@@ -49,9 +49,9 @@ function loadState(): QrState {
       entries: Array.isArray(parsed.entries) ? parsed.entries : [],
       settings: {
         ...defaultSettings,
-        ...parsed.settings,
+        ...parsed.settings
       },
-      lastSavedAt: null,
+      lastSavedAt: null
     };
   } catch {
     return initialState;
@@ -67,13 +67,13 @@ function reducer(state: QrState, action: Action): QrState {
     case "ADD_ENTRY": {
       const entries = [action.payload, ...state.entries].slice(
         0,
-        state.settings.maxHistory,
+        state.settings.maxHistory
       );
       return { ...state, entries, lastSavedAt: Date.now() };
     }
     case "REMOVE_ENTRY": {
       const entries = state.entries.filter(
-        (entry) => entry.id !== action.payload.id,
+        (entry) => entry.id !== action.payload.id
       );
       return { ...state, entries };
     }
@@ -105,7 +105,7 @@ export function QrStoreProvider({ children }: { children: ReactNode }) {
     }
 
     void invoke("set_close_to_tray_on_close", {
-      value: state.settings.closeToTrayOnClose,
+      value: state.settings.closeToTrayOnClose
     });
   }, [state.settings.closeToTrayOnClose]);
 
@@ -115,7 +115,7 @@ export function QrStoreProvider({ children }: { children: ReactNode }) {
     }
 
     void invoke("set_tray_restore_last_route", {
-      value: state.settings.trayRestoreLastRoute,
+      value: state.settings.trayRestoreLastRoute
     });
   }, [state.settings.trayRestoreLastRoute]);
 
@@ -125,7 +125,7 @@ export function QrStoreProvider({ children }: { children: ReactNode }) {
     }
 
     void invoke("set_auto_start_on_boot", {
-      value: state.settings.autoStartOnBoot,
+      value: state.settings.autoStartOnBoot
     });
   }, [state.settings.autoStartOnBoot]);
 
@@ -135,7 +135,7 @@ export function QrStoreProvider({ children }: { children: ReactNode }) {
     }
 
     void invoke("set_autostart_show_window", {
-      value: state.settings.autoStartShowWindow,
+      value: state.settings.autoStartShowWindow
     });
   }, [state.settings.autoStartShowWindow]);
 
@@ -152,13 +152,13 @@ export function QrStoreProvider({ children }: { children: ReactNode }) {
         payload: {
           id: crypto.randomUUID(),
           data,
-          createdAt: new Date().toISOString(),
-        },
+          createdAt: new Date().toISOString()
+        }
       });
 
       return { saved: true };
     },
-    [],
+    []
   );
 
   const removeEntry = useCallback((id: string) => {
@@ -179,9 +179,9 @@ export function QrStoreProvider({ children }: { children: ReactNode }) {
       addEntry,
       removeEntry,
       clearEntries,
-      updateSettings,
+      updateSettings
     }),
-    [state, addEntry, removeEntry, clearEntries, updateSettings],
+    [state, addEntry, removeEntry, clearEntries, updateSettings]
   );
 
   return (

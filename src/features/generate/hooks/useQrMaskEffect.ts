@@ -16,7 +16,7 @@ export function useQrMaskEffect({
   qrCanvasRef,
   qrMaskCanvasRef,
   bgColor,
-  rerenderKey,
+  rerenderKey
 }: UseQrMaskEffectInput) {
   useEffect(() => {
     if (
@@ -147,6 +147,6 @@ export function useQrMaskEffect({
     qrCanvasRef,
     qrMaskCanvasRef,
     rerenderKey,
-    useModuleImage,
+    useModuleImage
   ]);
 }

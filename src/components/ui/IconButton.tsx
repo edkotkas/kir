@@ -22,7 +22,7 @@ export function IconButton({
         active
           ? "border-primary-200 bg-[rgba(192,132,252,0.24)] text-primary-300"
           : "border-bg-300 bg-linear-to-br from-bg-200/90 to-bg-300/90 hover:brightness-110",
-        className,
+        className
       )}
       {...props}
     >

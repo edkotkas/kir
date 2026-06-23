@@ -7,5 +7,5 @@ export const DEFAULT_SETTINGS: Settings = {
   closeToTrayOnClose: true,
   trayRestoreLastRoute: true,
   autoStartOnBoot: false,
-  autoStartShowWindow: false,
+  autoStartShowWindow: false
 };

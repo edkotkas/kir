@@ -12,7 +12,7 @@ export function HistorySettingsSection({
   settings,
   entriesCount,
   updateSettings,
-  onClearHistory,
+  onClearHistory
 }: HistorySettingsSectionProps) {
   return (
     <Surface className="grid gap-2 rounded-2xl p-2">

@@ -6,7 +6,7 @@ import {
   GenerateControlsPanel,
   GenerateInputPanel,
   GeneratePreviewPanel,
-  GenerateStatusToast,
+  GenerateStatusToast
 } from "./components";
 import "./GeneratePage.css";
 import { useGenerateAutoSave, useQrMaskEffect, useSavedStatus } from "./hooks";
@@ -17,7 +17,7 @@ import {
   getGenerateRails,
   getImageSettings,
   MAX_INPUT_LENGTH,
-  MIN_CONTRAST,
+  MIN_CONTRAST
 } from "./utils";
 
 type GeneratePageLocationState = {
@@ -33,7 +33,7 @@ export function GeneratePage() {
   const locationState = location.state as GeneratePageLocationState | null;
 
   const [input, setInput] = useState(() =>
-    clampInput(locationState?.editEntry?.data ?? ""),
+    clampInput(locationState?.editEntry?.data ?? "")
   );
   const [hasUserEditedInput, setHasUserEditedInput] = useState(false);
   const [fgColor, setFgColor] = useState("#111827");
@@ -63,7 +63,7 @@ export function GeneratePage() {
   const hasContent = trimmed.length > 0;
   const ratio = useMemo(
     () => contrastRatio(fgColor, bgColor),
-    [fgColor, bgColor],
+    [fgColor, bgColor]
   );
 
   const hasCutout = Boolean(uploadedImage);
@@ -89,7 +89,7 @@ export function GeneratePage() {
         ratio,
         hasCutout,
         size,
-        hasMissingModuleImage,
+        hasMissingModuleImage
       }),
     [
       hasCutout,
@@ -98,13 +98,13 @@ export function GeneratePage() {
       isContentTooLong,
       ratio,
       size,
-      trimmed.length,
-    ],
+      trimmed.length
+    ]
   );
 
   const imageSettings = useMemo(
     () => getImageSettings(uploadedImage, size),
-    [size, uploadedImage],
+    [size, uploadedImage]
   );
 
   const maskRerenderKey = useMemo(
@@ -115,9 +115,9 @@ export function GeneratePage() {
         effectiveLevel,
         imageSettings?.src ?? "",
         imageSettings?.width ?? 0,
-        imageSettings?.height ?? 0,
+        imageSettings?.height ?? 0
       ].join("|"),
-    [effectiveLevel, imageSettings, size, trimmed],
+    [effectiveLevel, imageSettings, size, trimmed]
   );
 
   useQrMaskEffect({
@@ -126,7 +126,7 @@ export function GeneratePage() {
     qrCanvasRef,
     qrMaskCanvasRef,
     bgColor,
-    rerenderKey: maskRerenderKey,
+    rerenderKey: maskRerenderKey
   });
 
   useGenerateAutoSave({
@@ -135,7 +135,7 @@ export function GeneratePage() {
     canGenerate,
     hasUserEditedInput,
     autoSaveDelayMs,
-    setSaved,
+    setSaved
   });
 
   const onUploadImageInline = (event: ChangeEvent<HTMLInputElement>) => {

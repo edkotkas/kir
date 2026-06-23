@@ -18,16 +18,16 @@ export default defineConfig(({ command }) => ({
       ? {
           protocol: "ws",
           host: tauriHost,
-          port: 1421,
+          port: 1421
         }
       : undefined,
     watch: {
-      ignored: ["**/src-tauri/**"],
+      ignored: ["**/src-tauri/**"]
     },
-    allowedHosts: ["kuro", "kuro.local"],
+    allowedHosts: ["kuro", "kuro.local"]
   },
   build: {
-    chunkSizeWarningLimit: 750,
+    chunkSizeWarningLimit: 750
   },
   test: {
     globals: true,
@@ -44,15 +44,15 @@ export default defineConfig(({ command }) => ({
         "src/components/TitleBar.tsx",
         "src/pages/generate/GeneratePage.tsx",
         "src/pages/settings/SettingsPage.tsx",
-        "src/state/QrStore.tsx",
-      ],
-    },
+        "src/state/QrStore.tsx"
+      ]
+    }
   },
   plugins: [
     tailwindcss({
       optimize: {
-        minify: true,
-      },
+        minify: true
+      }
     }),
     react(),
     VitePWA({
@@ -71,10 +71,10 @@ export default defineConfig(({ command }) => ({
             src: "/favicon.svg",
             sizes: "any",
             type: "image/svg+xml",
-            purpose: "any",
-          },
-        ],
-      },
-    }),
-  ],
+            purpose: "any"
+          }
+        ]
+      }
+    })
+  ]
 }));

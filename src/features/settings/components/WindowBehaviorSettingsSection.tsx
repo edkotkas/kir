@@ -8,7 +8,7 @@ type WindowBehaviorSettingsSectionProps = {
 
 export function WindowBehaviorSettingsSection({
   settings,
-  updateSettings,
+  updateSettings
 }: WindowBehaviorSettingsSectionProps) {
   return (
     <Surface className="grid gap-2 rounded-2xl p-2">

@@ -9,7 +9,7 @@ type StartupSettingsSectionProps = {
 
 export function StartupSettingsSection({
   settings,
-  updateSettings,
+  updateSettings
 }: StartupSettingsSectionProps) {
   return (
     <Surface className="grid gap-2 rounded-2xl p-2">
@@ -30,7 +30,7 @@ export function StartupSettingsSection({
           "inline-flex items-center gap-2 text-sm transition",
           settings.autoStartOnBoot
             ? "text-stone-300"
-            : "cursor-not-allowed text-stone-600",
+            : "cursor-not-allowed text-stone-600"
         )}
       >
         <input

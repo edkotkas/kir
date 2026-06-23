@@ -16,7 +16,7 @@ export function Surface<T extends ElementType = "div">({
     <Component
       className={cn(
         "rounded-xl border border-bg-300/70 bg-linear-to-br from-bg-100/85 to-bg-200/85",
-        className,
+        className
       )}
       {...props}
     />

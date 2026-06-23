@@ -13,7 +13,7 @@ type HistoryPreviewModalProps = {
 
 export function HistoryPreviewModal({
   activeEntry,
-  onClose,
+  onClose
 }: HistoryPreviewModalProps) {
   return (
     <div

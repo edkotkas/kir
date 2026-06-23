@@ -6,7 +6,7 @@ import {
   PencilIcon,
   Surface,
   TrashIcon,
-  ZoomIcon,
+  ZoomIcon
 } from "../../../components";
 import type { QrEntry } from "../../../types/qr";
 import { formatHistoryDate } from "../utils/formatDate";
@@ -22,7 +22,7 @@ type HistoryEntryCardProps = {
 export function HistoryEntryCard({
   entry,
   onPreview,
-  onRemove,
+  onRemove
 }: HistoryEntryCardProps) {
   const navigate = useNavigate();
 
@@ -71,8 +71,8 @@ export function HistoryEntryCard({
               onClick={() =>
                 navigate("/", {
                   state: {
-                    editEntry: { id: entry.id, data: entry.data },
-                  },
+                    editEntry: { id: entry.id, data: entry.data }
+                  }
                 })
               }
               type="button"

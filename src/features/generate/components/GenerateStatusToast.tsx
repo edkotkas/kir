@@ -9,7 +9,7 @@ type GenerateStatusToastProps = {
 
 export function GenerateStatusToast({
   saved,
-  onDismiss,
+  onDismiss
 }: GenerateStatusToastProps) {
   return (
     <div
@@ -17,7 +17,7 @@ export function GenerateStatusToast({
         "fixed bottom-4 left-4 right-4 z-50 rounded-xl border px-3 py-2 text-sm shadow-lg backdrop-blur-sm toast-enter",
         saved.ok
           ? "border-primary-200/60 bg-bg-200/95 text-primary-300"
-          : "border-accent-100/60 bg-bg-300/95 text-text-100",
+          : "border-accent-100/60 bg-bg-300/95 text-text-100"
       )}
     >
       <div className="flex items-start justify-between gap-3">
